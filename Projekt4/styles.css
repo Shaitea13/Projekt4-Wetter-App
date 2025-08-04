@@ -1,470 +1,719 @@
-/* CSS3 Custom Properties für moderne Wartbarkeit */
 :root {
-    --primary-color: #4f28e9;
-    --primary-dark: #3c1fa3;
-    --background-light: #f9f9f9;
-    --background-card: #e0cfee;
-    --text-primary: #4f28e9;
-    --text-secondary: #666;
-    --shadow-soft: 0 2px 4px rgba(0, 0, 0, 0.1);
-    --transition: all 0.3s ease;
+    --primary-color: #4f28e9;
+    --primary-dark: #3c1fa3;
+    --background-light: #f9f9f9;
+    --background-card: #e0cfee;
+    --text-primary: #4f28e9;
+    --text-secondary: #666;
+    --shadow-soft: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
 }
-/* ORIGINAL Body-Styling beibehalten */
+
 body {
-    background: linear-gradient(to right, #e8efca, #c3f6ea, #f7dfe9, #d3fce6, #f0f5ca);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    font-family: Arial, sans-serif;
-    color: var(--text-primary);
-    overflow: hidden;
+    background: linear-gradient(to right, #e8efca, #c3f6ea, #f7dfe9, #d3fce6, #f0f5ca);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: var(--text-primary);
+    overflow: hidden;
 }
-/* ORIGINAL Container (7 Zoll Smartphone) mit Lila Hintergrund */
+/* Container (7 Zoll Smartphone) mit Lila Hintergrund */
 .container {
-    border-radius: 30px;
-    border: 10px solid var(--primary-color);
-    width: 400px;
-    height: 750px;
-    padding: 20px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: relative;
-    background: linear-gradient(135deg, #f3e7ff 0%, #e6d3ff 50%, #d9bfff 100%);
+    border-radius: 30px;
+    border: 10px solid var(--primary-color);
+    width: 400px;
+    height: 750px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    background: linear-gradient(135deg, #f3e7ff 0%, #e6d3ff 50%, #d9bfff 100%);
 }
-/* ORIGINAL Home-Styling */
+/* Home-Styling */
 .home {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-grow: 1;
 }
 .icon {
-    display: block;
-    margin: 0 auto;
+    display: block;
+    margin: 0 auto;
 }
 .large {
-    width: 240px;
-    margin: 40px 0;
+    width: 240px;
+    margin: 40px 0;
 }
 .home .title {
-    font-size: 40px;
-    margin-bottom: 50px;
+    font-size: 40px;
+    margin-bottom: 50px;
 }
 .small-icon {
-    width: 30px;
-    margin: 0 5px;
+    width: 30px;
+    margin: 0 5px;
 }
-/* Moderne Input-Styling (HTML5 search) */
+/* Input-Styling  */
 input[type="search"] {
-    padding: 10px;
-    border: 2px solid var(--primary-color);
-    border-radius: 20px;
-    width: 80%;
-    margin-bottom: 10px;
-    font-family: inherit;
-    transition: var(--transition);
-    outline: none;
+    padding: 10px;
+    border: 2px solid var(--primary-color);
+    border-radius: 20px;
+    width: 80%;
+    margin-bottom: 10px;
+    font-family: inherit;
+    transition: var(--transition);
+    outline: none;
 }
 input[type="search"]:focus {
-    border-color: var(--primary-dark);
-    box-shadow: 0 0 0 2px rgba(79, 40, 233, 0.2);
+    border-color: var(--primary-dark);
+    box-shadow: 0 0 0 2px rgba(79, 40, 233, 0.2);
 }
-/* ORIGINAL Button-Styling mit CSS3 Verbesserungen */
+/* Button-Styling */
 button {
-    padding: 10px;
-    background-color: var(--primary-color);
-    color: white;
-    border: none;
-    border-radius: 20px;
-    width: 45%;
-    cursor: pointer;
-    transition: var(--transition);
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    width: 45%;
+    cursor: pointer;
+    transition: var(--transition);
 }
 button:hover {
-    background-color: var(--primary-dark);
-    transform: translateY(-1px);
+    background-color: var(--primary-dark);
+    transform: translateY(-1px);
 }
-/* ORIGINAL Footer */
+/* Footer */
 .footer-container {
-    text-align: center;
-    margin-top: auto;
+    text-align: center;
+    margin-top: auto;
 }
 .footer {
-    display: block;
-    margin: 5px 0;
+    display: block;
+    margin: 5px 0;
 }
 .footer-link {
-    display: inline-block;
-    color: var(--primary-color);
-    transition: color 0.2s ease;
+    display: inline-block;
+    color: var(--primary-color);
+    transition: color 0.2s ease;
 }
 .footer-link:hover {
-    color: var(--primary-dark);
+    color: var(--primary-dark);
 }
-/* ORIGINAL Weather-Section */
+/* Weather-Section */
 .weather {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    padding: 10px;
-    margin: -10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    padding: 10px;
+    margin: -10px;
 }
-/* Neuer Back-Button */
+/* Back-Button */
 .back-button {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    background-color: var(--primary-color);
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    font-size: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 10;
-    transition: var(--transition);
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: var(--transition);
 }
 .back-button:hover {
-    background-color: var(--primary-dark);
+    background-color: var(--primary-dark);
 }
-/* ORIGINAL Location-Container */
+/* Location-Container */
 .location-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
 }
 .city-name {
-    margin-left: 10px;
-    font-weight: bold;
-    font-size: x-large;
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: x-large;
 }
-/* ORIGINAL Date-Time - MITTIG */
+/* Date-Time - MITTIG */
 .date-time {
-    text-align: center;
-    margin: 10px 0;
-    font-size: 0.9em;
-    width: 100%;
-    display: block;
+    text-align: center;
+    margin: 10px 0;
+    font-size: 0.9em;
+    width: 100%;
+    display: block;
 }
-/* UPDATED Temperature Container - Icon rechts neben der Zahl */
+/* Temperature Container - Icon rechts neben der Zahl */
 .temperature-container {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 20px 0;
 }
 #temperature {
-    font-size: 7em;
-    font-family: 'Rubik', sans-serif;
-    font-weight: bold;
-    color: var(--primary-color);
-    margin: 0;
-    line-height: 1;
+    font-size: 7em;
+    font-family: 'Rubik', sans-serif;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin: 0;
+    line-height: 1;
 }
 #weatherIcon {
-    width: 60px;
-    height: 60px;
-    margin-left: -45px;            
+    width: 60px;
+    height: 60px;
+    margin-left: -45px;            
 }
-/* ORIGINAL Weather Info */
+/* Weather Info */
 .weather-info {
-    text-align: center;
-    margin: 0;
+    text-align: center;
+    margin: 0;
 }
 .weather-description {
-    font-size: 1.2em;
-    font-weight: 500;
+    font-size: 1.2em;
+    font-weight: 500;
 }
-/* ORIGINAL Data-Container (VERTIKAL wie gewünscht) */
+/* Data-Container (VERTIKAL) */
 .data-container {
-    display: flex;
-    justify-content: space-around;
-    background-color: var(--background-light);
-    padding: 20px;
-    border-radius: 40px;
-    box-shadow: var(--shadow-soft);
-    width: 240px;
-    margin: 20px auto;
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--background-light);
+    padding: 20px;
+    border-radius: 40px;
+    box-shadow: var(--shadow-soft);
+    width: 240px;
+    margin: 20px auto;
 }
 .data {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 10px;
-    font-size: 1em;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px;
+    font-size: 1em;
+    text-align: center;
 }
 .data span,
 .data data {
-    margin-top: 5px;
-    font-weight: 500;
+    margin-top: 5px;
+    font-weight: 500;
 }
-/* Neue Section-Titel */
+/* Section-Titel */
 .section-title {
-    font-size: 1.1em;
-    font-weight: bold;
-    margin: 20px 0 10px 0;
-    color: var(--primary-color);
-    text-align: center;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin: 20px 0 10px 0;
+    color: var(--primary-color);
+    text-align: center;
 }
-/* Neue stündliche Vorhersage - Horizontal Scrollbar */
+/* Stündliche Vorhersage - Horizontal Scrollbar */
 .hourly-forecast-container {
-    overflow-x: auto;
-    overflow-y: hidden;
-    padding: 10px 0;
-    margin-bottom: 15px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 10px 0;
+    margin-bottom: 15px;
 }
 .hourly-forecast {
-    display: flex;
-    gap: 6px;
-    min-width: max-content;
-    padding: 5px;
+    display: flex;
+    gap: 6px;
+    min-width: max-content;
+    padding: 5px;
 }
 .hourly-item {
-    min-width: 80px;
-    width: 80px; /* Alle Container gleich groß */
-    text-align: center;
-    background: rgba(79, 40, 233, 0.1);
-    border-radius: 15px;
-    padding: 15px 8px;
-    transition: var(--transition);
-    flex-shrink: 0;
+    min-width: 80px;
+    width: 80px; /* Alle Container gleich groß */
+    text-align: center;
+    background: rgba(79, 40, 233, 0.1);
+    border-radius: 15px;
+    padding: 15px 8px;
+    transition: var(--transition);
+    flex-shrink: 0;
 }
 .hourly-item:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    background: rgba(79, 40, 233, 0.15);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    background: rgba(79, 40, 233, 0.15);
 }
 .hourly-time {
-    font-size: 0.8em;
-    color: var(--text-secondary);
-    margin-bottom: 8px;
-    font-weight: bold;
+    font-size: 0.8em;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+    font-weight: bold;
 }
 .hourly-icon {
-    width: 32px;
-    height: 32px;
-    margin: 8px auto;
-    display: block;
+    width: 32px;
+    height: 32px;
+    margin: 8px auto;
+    display: block;
 }
 .hourly-desc {
-    font-size: 0.7em;
-    color: var(--text-secondary);
-    margin-bottom: 5px;
-    line-height: 1.2;
+    font-size: 0.7em;
+    color: var(--text-secondary);
+    margin-bottom: 5px;
+    line-height: 1.2;
 }
 .hourly-temp {
-    font-size: 0.9em;
-    font-weight: bold;
-    color: var(--primary-color);
+    font-size: 0.9em;
+    font-weight: bold;
+    color: var(--primary-color);
 }
-/* 15-Tage-Vorhersage - MEHR ABSTAND zwischen Containern */
+/* 15-Tage-Vorhersage */
 .weekly-forecast-new {
-    display: grid;
-    grid-template-columns: repeat(15, 80px);
-    gap: 18px; /* Erhöht von 8px auf 18px für mehr Abstand */
-    margin-bottom: 15px;
-    overflow-x: auto;
-    padding: 5px 10px; /* Zusätzliches Padding für bessere Optik */
+    display: grid;
+    grid-template-columns: repeat(15, 80px);
+    gap: 18px; 
+    margin-bottom: 15px;
+    overflow-x: auto;
+    padding: 5px 10px;
 }
 .weekly-forecast-new::-webkit-scrollbar {
-    height: 6px;
+    height: 6px;
 }
 .weekly-forecast-new::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    border-radius: 10px;
+    background: #f1f1f1;
+    border-radius: 10px;
 }
 .weekly-forecast-new::-webkit-scrollbar-thumb {
-    background: var(--primary-color);
-    border-radius: 10px;
+    background: var(--primary-color);
+    border-radius: 10px;
 }
 .daily-item {
-    background: rgba(79, 40, 233, 0.1);
-    border-radius: 20px;
-    padding: 12px 6px;
-    text-align: center;
-    transition: var(--transition);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    min-height: 140px; /* Alle Container gleich hoch */
-    height: 140px;
-    width: 80px;
+    background: rgba(79, 40, 233, 0.1);
+    border-radius: 20px;
+    padding: 12px 6px;
+    text-align: center;
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 140px; /* Alle Container gleich hoch */
+    height: 140px;
+    width: 80px;
 }
 .daily-item:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    background: rgba(79, 40, 233, 0.15);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    background: rgba(79, 40, 233, 0.15);
 }
 .daily-day {
-    font-size: 0.75em;
-    font-weight: bold;
-    color: var(--primary-color);
-    margin-bottom: 4px;
+    font-size: 0.75em;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 4px;
 }
 .daily-date {
-    font-size: 0.65em;
-    color: var(--text-secondary);
-    margin-bottom: 8px;
+    font-size: 0.65em;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
 }
 .daily-icon {
-    width: 32px;
-    height: 32px;
-    margin: 6px 0;
-    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    margin: 6px 0;
+    flex-shrink: 0;
 }
 .daily-desc {
-    font-size: 0.65em;
-    color: var(--text-secondary);
-    margin-bottom: 8px;
-    line-height: 1.1;
-    text-align: center;
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
+    font-size: 0.65em;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+    line-height: 1.1;
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
 }
 .daily-temps {
-    font-size: 0.75em;
-    font-weight: bold;
-    color: var(--primary-color);
+    font-size: 0.75em;
+    font-weight: bold;
+    color: var(--primary-color);
 }
 .temp-high {
-    color: #e74c3c;
+    color: #e74c3c;
 }
 .temp-low {
-    color: #3498db;
+    color: #3498db;
 }
-/* Temperatur-Liniendiagramm Container - OPTIMIERTE GRÖSSE */
+/* Temperatur-Liniendiagramm Container */
 .chart-container {
-    width: 95%;
-    height: 180px; /* Reduziert für bessere Scrollbarkeit */
-    margin: 10px 0 15px 0;
-    overflow: hidden;
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 15px;
-    padding: 10px;
-    box-shadow: var(--shadow-soft);
-    position: relative;
+    width: 95%;
+    height: 180px; 
+    margin: 10px 0 15px 0;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: var(--shadow-soft);
+    position: relative;
 }
 #temperatureChart {
-    width: 100% !important;
-    height: 100% !important;
-    display: block;
-    max-width: 100%;
-    max-height: 160px; /* Angepasst an Container */
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
+    max-width: 100%;
+    max-height: 160px; 
 }
-/* UPDATED Sonnenauf-/untergang mit Animation beim Scrollen */
+/* Sonnenauf-/untergang mit Animation beim Scrollen */
 .sun-cycle {
-    text-align: center;
-    background: linear-gradient(180deg, #ffeaa7 0%, #fdcb6e 100%);
-    border-radius: 15px;
-    padding: 20px;
-    position: relative;
-    overflow: hidden;
-    margin-bottom: 15px;
+    text-align: center;
+    background: linear-gradient(180deg, #ffeaa7 0%, #fdcb6e 100%);
+    border-radius: 15px;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 15px;
 }
 .sun-arc {
-    width: 200px;
-    height: 100px;
-    margin: 0 auto 20px;
-    position: relative;
-    border: 3px solid #f39c12;
-    border-bottom: none;
-    border-radius: 100px 100px 0 0;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.1) 100%);
+    width: 200px;
+    height: 100px;
+    margin: 0 auto 20px;
+    position: relative;
+    border: 3px solid #f39c12;
+    border-bottom: none;
+    border-radius: 100px 100px 0 0;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.1) 100%);
 }
 .sun {
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    background: radial-gradient(circle, #f1c40f 0%, #f39c12 100%);
-    border-radius: 50%;
-    box-shadow: 0 0 15px rgba(241, 196, 15, 0.6);
-    bottom: -12px;
-    left: -12px;
-    transform-origin: calc(100px + 12px) 12px;
-    transform: rotate(0deg); /* Startposition */
-    transition: none; /* Keine Transition beim Start */
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: radial-gradient(circle, #f1c40f 0%, #f39c12 100%);
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(241, 196, 15, 0.6);
+    bottom: -12px;
+    left: -12px;
+    transform-origin: calc(100px + 12px) 12px;
+    transform: rotate(0deg); /* Startposition */
+    transition: none; /* Keine Transition beim Start */
 }
 /* Klasse für animierte Sonne */
 .sun.animate {
-    transition: transform 3s ease-in-out; /* Animation dauert 3 Sekunden */
+    transition: transform 3s ease-in-out; /* Animation dauert 3 Sekunden */
 }
 .sun-times {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 15px;
-    font-size: 0.9em;
-    color: #333;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    font-size: 0.9em;
+    color: #333;
 }
 .sun-time {
-    display: flex;
-    align-items: center;
-    gap: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 .sun-time time {
-    font-weight: bold;
+    font-weight: bold;
 }
-/* CSS3 Scrollbar Styling */
+
 .weather::-webkit-scrollbar,
 .hourly-forecast-container::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
+    width: 8px;
+    height: 8px;
 }
 .weather::-webkit-scrollbar-track,
 .hourly-forecast-container::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    border-radius: 10px;
+    background: #f1f1f1;
+    border-radius: 10px;
 }
 .weather::-webkit-scrollbar-thumb,
 .hourly-forecast-container::-webkit-scrollbar-thumb {
-    background: var(--primary-color);
-    border-radius: 10px;
+    background: var(--primary-color);
+    border-radius: 10px;
 }
 .weather::-webkit-scrollbar-thumb:hover,
 .hourly-forecast-container::-webkit-scrollbar-thumb:hover {
-    background: var(--primary-dark);
+    background: var(--primary-dark);
 }
-/* Media Queries für responsive Design */
-@media (max-width: 420px) {
-    .container {
-        width: 95vw;
-        height: 95vh;
-    }
-    
-    .weekly-forecast-new {
-        grid-template-columns: repeat(7, 70px);
-        gap: 12px; /* Angepasster Abstand für mobile Geräte */
-    }
-    
-    .daily-item {
-        min-height: 120px;
-        height: 120px;
-        width: 70px;
-    }
+
+/* SMARTPHONE ANPASSUNGEN für Wetter App */
+@media (max-width: 480px) {
+    /* Body anpassen für Mobile */
+    body {
+        height: 100vh;
+        padding: 0;
+        margin: 0;
+        overflow: auto;
+    }
+    
+    /* Container füllt den gesamten Bildschirm */
+    .container {
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0;
+        border: none;
+        padding: 15px;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    
+    /* Home Screen Anpassungen */
+    .home .title {
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+    
+    .large {
+        width: 180px;
+        margin: 20px 0;
+    }
+    
+    /* Input und Button */
+    input[type="search"] {
+        width: 90%;
+        padding: 12px;
+        font-size: 16px; /* Verhindert Zoom beim Focus auf iOS */
+    }
+    
+    button {
+        width: 60%;
+        padding: 12px;
+        font-size: 16px;
+    }
+    
+    /* Weather Section */
+    .weather {
+        padding: 5px;
+        margin: -5px;
+    }
+    
+    /* Back Button kleiner */
+    .back-button {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+        top: 10px;
+        left: 10px;
+    }
+    
+    /* Location anpassen */
+    .location-container {
+        margin-top: 50px;
+    }
+    
+    .city-name {
+        font-size: 1.4em;
+    }
+    
+    /* Temperatur kleiner */
+    #temperature {
+        font-size: 5em;
+    }
+    
+    #weatherIcon {
+        width: 50px;
+        height: 50px;
+        margin-left: -35px;
+    }
+    
+    /* Data Container schmaler */
+    .data-container {
+        width: 85%;
+        padding: 15px;
+        margin: 15px auto;
+    }
+    
+    .data {
+        font-size: 0.9em;
+    }
+    
+    /* Stündliche Vorhersage */
+    .hourly-item {
+        min-width: 70px;
+        width: 70px;
+        padding: 12px 6px;
+    }
+    
+    .hourly-icon {
+        width: 28px;
+        height: 28px;
+    }
+    
+    /* 15-Tage Vorhersage */
+    .weekly-forecast-new {
+        grid-template-columns: repeat(15, 70px);
+        gap: 10px;
+        padding: 5px;
+    }
+    
+    .daily-item {
+        width: 70px;
+        height: 120px;
+        min-height: 120px;
+        padding: 10px 5px;
+    }
+    
+    .daily-icon {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .daily-day {
+        font-size: 0.7em;
+    }
+    
+    .daily-date {
+        font-size: 0.6em;
+    }
+    
+    .daily-desc {
+        font-size: 0.6em;
+    }
+    
+    .daily-temps {
+        font-size: 0.7em;
+    }
+    
+    /* Chart Container */
+    .chart-container {
+        height: 150px;
+        padding: 8px;
+    }
+    
+    #temperatureChart {
+        max-height: 130px;
+    }
+    
+    /* Sonnenauf-/untergang */
+    .sun-cycle {
+        padding: 15px;
+    }
+    
+    .sun-arc {
+        width: 160px;
+        height: 80px;
+    }
+    
+    .sun {
+        width: 20px;
+        height: 20px;
+        bottom: -10px;
+        left: -10px;
+        transform-origin: calc(80px + 10px) 10px;
+    }
+    
+    .sun-times {
+        font-size: 0.8em;
+    }
+    
+    /* Footer */
+    .footer-container {
+        font-size: 0.9em;
+    }
 }
+
+/* Sehr kleine Smartphones */
+@media (max-width: 360px) {
+    /* Container Padding reduzieren */
+    .container {
+        padding: 10px;
+    }
+    
+    /* Titel noch kleiner */
+    .home .title {
+        font-size: 28px;
+    }
+    
+    .large {
+        width: 150px;
+    }
+    
+    /* Temperatur */
+    #temperature {
+        font-size: 4em;
+    }
+    
+    #weatherIcon {
+        width: 40px;
+        height: 40px;
+        margin-left: -30px;
+    }
+    
+    /* Vorhersage Items noch kleiner */
+    .hourly-item {
+        min-width: 60px;
+        width: 60px;
+        padding: 10px 5px;
+    }
+    
+    .weekly-forecast-new {
+        grid-template-columns: repeat(15, 60px);
+        gap: 8px;
+    }
+    
+    .daily-item {
+        width: 60px;
+        height: 110px;
+        min-height: 110px;
+    }
+    
+    /* Data Container */
+    .data-container {
+        width: 90%;
+        padding: 12px;
+    }
+    
+    .data {
+        font-size: 0.8em;
+    }
+    
+    /* Sun Arc */
+    .sun-arc {
+        width: 140px;
+        height: 70px;
+    }
+}
+
+/* iPhone SE und ähnliche */
 @media (max-width: 320px) {
-    .weekly-forecast-new {
-        grid-template-columns: repeat(5, 60px);
-        gap: 10px; /* Angepasster Abstand für kleine Bildschirme */
-    }
-    
-    .hourly-item {
-        min-width: 70px;
-        width: 70px;
-    }
+    .home .title {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    
+    .large {
+        width: 120px;
+    }
+    
+    input[type="search"] {
+        width: 95%;
+        padding: 10px;
+    }
+    
+    button {
+        width: 70%;
+    }
+    
+    #temperature {
+        font-size: 3.5em;
+    }
+    
+    .weekly-forecast-new {
+        grid-template-columns: repeat(15, 55px);
+    }
+    
+    .daily-item {
+        width: 55px;
+        height: 100px;
+        min-height: 100px;
+        padding: 8px 4px;
+    }
+    
+    .daily-icon {
+        width: 24px;
+        height: 24px;
+    }
 }
